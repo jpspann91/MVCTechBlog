@@ -1,9 +1,11 @@
+//Import Model and DateTypes from sequelize
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+//Comments inherits properties from Model
 class Comment extends Model {
 }
-
+//Column structure for comment model
 Comment.init(
   {
     id: {

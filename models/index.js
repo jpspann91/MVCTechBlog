@@ -1,7 +1,9 @@
+//import User, Blog and Comment models
 const User = require('./User');
 const Blog = require('./Blog');
 const Comment = require('./Comments')
 
+//Set relatinoships between models
 Blog.belongsTo(User, { 
   foreignKey: 'blogger_id'
 })

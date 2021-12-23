@@ -1,9 +1,12 @@
+//Import Model and DataTypes from sequelize
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+//Blog inherits methods and properties from Model
 class Blog extends Model {
 }
 
+//Column structure for Blog model
 Blog.init(
   {
     id: {

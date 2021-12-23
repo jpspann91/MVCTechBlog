@@ -1,13 +1,17 @@
+//Import Model and DataTypes from sequelize
 const { Model, DataTypes } = require('sequelize');
+//Import bcrypt for password
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
+//User inherits all properties and moethods from Model
 class User extends Model {
+  //Call checkPassword helper function
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
-
+//Column strcuture for User model
 User.init(
   {
     id: {
@@ -37,6 +41,7 @@ User.init(
     },
   },
   {
+    //Hook to bcrypt password before user creation
     hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);

@@ -1,8 +1,12 @@
+<!--For each object passed into the template create a card -->
 {{#each data}}
 <div class="card">
+  <!--Use blog title partial-->
   <h5 class="card-header">{{title}}</h5>
   <div class="card-body">
+    <!--Use user.name partial, call timeConvert helper function and pass in createdAt-->
     <h5 class="card-title">Author: {{user.name}} || Created: {{timeConvert createdAt}}</h5>
+    <!--Pass in content partial-->
     <p class="card-text">{{content}}</p>
   </div>
 </div>

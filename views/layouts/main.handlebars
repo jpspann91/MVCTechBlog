@@ -1,3 +1,4 @@
+<!--Main Page Template-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,9 +12,11 @@
 
 <body class="container">
   <header>
+    <!--Nav bar to hold home page dashboard and logout/login-->
     <nav class="nav">
       <button class="btn btn-primary"><a class="nav-link active" aria-current="page" href="/">Home</a></button>
       <button class="btn btn-primary"><a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a></button>
+      <!--If logged in shows logout, if not then show login-->
     {{#if logged_in}}
      <button class="btn btn-primary" id="logout"><a class="nav-link active" aria-current="page" href="#">Logout</a></button>
     {{else}}

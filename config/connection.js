@@ -1,10 +1,13 @@
+// Bioler plate connection.js file
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
-let sequelize;
 
+let sequelize;
+//First try to use JawsDB 
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
+  //If no JAWS then use .ENV file info
 } else {
   sequelize = new Sequelize(
     process.env.DB_NAME,
