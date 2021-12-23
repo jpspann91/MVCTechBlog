@@ -12,3 +12,12 @@ header {
 h1 { 
   color:blanchedalmond;
 }
+.card-header{
+  background-color: maroon;
+  color: bisque;
+}
+.card-body{
+  background-color: bisque;
+  color: maroon;
+}
+
